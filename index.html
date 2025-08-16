@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimpleJS - Lightweight JS Framework</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="fade-in">
+    <h1>SimpleJS</h1>
+    <p>A professional, lightweight JavaScript framework</p>
+    <button onclick="scrollToSection('get-started')">Get Started</button>
+  </header>
+
+  <section id="features" class="fade-in">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="card slide-up">
+        <h3>🚀 Fast</h3>
+        <p>Minimal overhead for maximum speed.</p>
+      </div>
+      <div class="card slide-up">
+        <h3>📦 Lightweight</h3>
+        <p>Just a few KB, no dependencies.</p>
+      </div>
+      <div class="card slide-up">
+        <h3>⚡ Reactive</h3>
+        <p>Easy-to-use reactivity system built-in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="example" class="fade-in">
+    <h2>Example</h2>
+    <pre><code>
+// SimpleJS Example
+SimpleJS.createApp({
+  data: { message: "Hello World!" },
+  render() {
+    return `<h1>${this.message}</h1>`;
+  }
+}).mount("#app");
+    </code></pre>
+    <div id="app" class="highlight-box"></div>
+  </section>
+
+  <section id="get-started" class="fade-in">
+    <h2>Get Started</h2>
+    <p>Install via npm:</p>
+    <pre><code>npm install simplejs</code></pre>
+    <a class="button pulse" href="https://github.com/yourgithub/simplejs" target="_blank">View on GitHub</a>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 SimpleJS — MIT License</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
