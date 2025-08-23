@@ -3,58 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SimpleJS - Lightweight JS Framework</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Thundered Studios — Build Bold.</title>
+  <meta name="description" content="Thundered Studios builds bold digital experiences — apps, games, and websites with striking design and solid engineering." />
+  <meta property="og:title" content="Thundered Studios — Build Bold." />
+  <meta property="og:description" content="Apps, games, and websites with striking design and solid engineering." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%230ea5e9' d='m160 0-96 144h64l-32 112 96-160h-64z'/%3E%3C/svg%3E">
 </head>
 <body>
-  <header class="fade-in">
-    <h1>SimpleJS</h1>
-    <p>A professional, lightweight JavaScript framework</p>
-    <button onclick="scrollToSection('get-started')">Get Started</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header container">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">⚡</span>
+      <span class="brand-name">Thundered <strong>Studios</strong></span>
+    </div>
+    <nav class="nav" aria-label="Main">
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+      <ul id="navMenu" class="nav-menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="features" class="fade-in">
-    <h2>Features</h2>
-    <div class="feature-grid">
-      <div class="card slide-up">
-        <h3>🚀 Fast</h3>
-        <p>Minimal overhead for maximum speed.</p>
+  <main id="main">
+    <section class="hero container reveal">
+      <div class="hero-text">
+        <h1>Build <span class="accent">Bold</span>.</h1>
+        <p>We craft high-performance apps, websites, and game tech—fast, clean, and reliable. Lightning meets polish.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Start a project</a>
+          <a class="btn ghost" href="#work">See our work</a>
+        </div>
       </div>
-      <div class="card slide-up">
-        <h3>📦 Lightweight</h3>
-        <p>Just a few KB, no dependencies.</p>
+      <div class="hero-art">
+        <svg viewBox="0 0 600 400" role="img" aria-label="Lightning abstract artwork">
+          <defs>
+            <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="currentColor" stop-opacity="0.2" />
+              <stop offset="100%" stop-color="currentColor" stop-opacity="0.8" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="600" height="400" fill="none" stroke="currentColor" opacity="0.2"/>
+          <g>
+            <path d="M400 20 L260 220 L340 220 L240 380 L380 160 L300 160 Z" fill="url(#grad)" />
+            <circle cx="500" cy="80" r="10" />
+            <circle cx="520" cy="110" r="4" />
+            <circle cx="540" cy="90" r="6" />
+          </g>
+        </svg>
       </div>
-      <div class="card slide-up">
-        <h3>⚡ Reactive</h3>
-        <p>Easy-to-use reactivity system built-in.</p>
+    </section>
+
+    <section id="services" class="container section reveal">
+      <h2 class="section-title">What we do</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Web Experiences</h3>
+          <p>Blazing-fast, responsive websites with accessible UI and modern SEO.</p>
+          <ul class="list">
+            <li>Landing pages, dashboards</li>
+            <li>eCommerce & auth flows</li>
+            <li>CMS integrations</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>App Development</h3>
+          <p>Cross-platform apps with clean architecture and quality tooling.</p>
+          <ul class="list">
+            <li>APIs & backends</li>
+            <li>CI/CD pipelines</li>
+            <li>Analytics & telemetry</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Game & Interactive</h3>
+          <p>Gameplay tools, plugins, and services powering real-time experiences.</p>
+          <ul class="list">
+            <li>Engines & mod tooling</li>
+            <li>Realtime services</li>
+            <li>Performance audits</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="container section reveal">
+      <h2 class="section-title">Selected work</h2>
+      <div class="grid work-grid">
+        <figure class="work-card">
+          <img src="https://picsum.photos/seed/thunder1/800/600" alt="Project dashboard preview"/>
+          <figcaption>
+            <h3>Stormboard</h3>
+            <p>Analytics dashboard with live metrics and delightful UX.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <img src="https://picsum.photos/seed/thunder2/800/600" alt="Mobile app mockup"/>
+          <figcaption>
+            <h3>Volt Mobile</h3>
+            <p>Cross-platform app with offline sync and smooth navigation.</p>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <img src="https://picsum.photos/seed/thunder3/800/600" alt="Gameplay tools screenshot"/>
+          <figcaption>
+            <h3>Arc Tools</h3>
+            <p>Developer toolkit for modding and rapid prototyping.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="container section reveal">
+      <h2 class="section-title">About us</h2>
+      <p>Thundered Studios is a small, senior team that ships. We value clean code, thoughtful design, and practical iteration. No fluff—just results.</p>
+      <div class="stats">
+        <div><span class="stat">50+</span><span>projects shipped</span></div>
+        <div><span class="stat">4.9★</span><span>client rating</span></div>
+        <div><span class="stat">72h</span><span>avg prototype</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section reveal">
+      <h2 class="section-title">Let’s talk</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="row">
+          <label>Full name
+            <input type="text" name="name" required placeholder="Alex Thunder" />
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="you@company.com" />
+          </label>
+        </div>
+        <label>Project brief
+          <textarea name="message" rows="5" required placeholder="Tell us about your goals, timeline, and budget."></textarea>
+        </label>
+        <div class="row">
+          <label class="checkbox">
+            <input type="checkbox" name="nda" />
+            <span>Request NDA</span>
+          </label>
+          <div class="spacer"></div>
+          <button type="submit" class="btn primary">Send message</button>
+        </div>
+        <p class="form-note">We reply within one business day.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">⚡</span>
+        <span class="brand-name">Thundered <strong>Studios</strong></span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="social">
+        <a aria-label="Twitter" href="#">Twitter</a>
+        <a aria-label="GitHub" href="#">GitHub</a>
+        <a aria-label="Email" href="#contact">Email</a>
       </div>
     </div>
-  </section>
-
-  <section id="example" class="fade-in">
-    <h2>Example</h2>
-    <pre><code>
-// SimpleJS Example
-SimpleJS.createApp({
-  data: { message: "Hello World!" },
-  render() {
-    return `<h1>${this.message}</h1>`;
-  }
-}).mount("#app");
-    </code></pre>
-    <div id="app" class="highlight-box"></div>
-  </section>
-
-  <section id="get-started" class="fade-in">
-    <h2>Get Started</h2>
-    <p>Install via npm:</p>
-    <pre><code>npm install simplejs</code></pre>
-    <a class="button pulse" href="https://github.com/Creeperkid2014/SimpleJS" target="_blank">View on GitHub</a>
-  </section>
-
-  <footer class="fade-in">
-    <p>© 2025 SimpleJS — MIT License</p>
+    <p class="copyright">© <span id="year"></span> Thundered Studios. All rights reserved.</p>
   </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>
